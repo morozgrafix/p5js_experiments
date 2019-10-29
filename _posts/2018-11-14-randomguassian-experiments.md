@@ -133,7 +133,7 @@ Voila! Here is our final result after running this sketch for some time:
 
 **Demo:**
 
-<div id='sketch-holder'></div>
+<div id="sketch-holder"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
 <script>
