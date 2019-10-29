@@ -58,7 +58,7 @@ plugins:
 author:
   name   : "Sergey Morozov"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Quality Engineer @SlackHQ. ex @Flickr. I like photography, sailing, hockey and beer. Oh and I may know a guy..."
+  bio    : "Quality Engineer at [Slack](https://slack.com). Previously at [Flickr](https://flickr.com). I like photography, sailing, hockey and beer. Oh and I may know a guy..."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
