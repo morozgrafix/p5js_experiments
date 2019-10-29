@@ -133,13 +133,16 @@ Voila! Here is our final result after running this sketch for some time:
 
 **Demo:**
 
+<div id='sketch-holder'></div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
 <script>
 var sd = 180;
 var mean = 200;
 
 function setup() {
-  createCanvas(1000, 1000);
+  var canvas = createCanvas(1000, 1000);
+  canvas.parent('sketch-holder');
   background(10);
 }
 
