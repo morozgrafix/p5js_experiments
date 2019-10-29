@@ -21,6 +21,8 @@ twitter_username: morozgrafix
 github_username: morozgrafix
 minimal_mistakes_skin: air
 search: true
+url: "https://morozgrafix.github.io"
+baseurl: "/p5js-experiments"
 
 # Build settings
 markdown: kramdown
