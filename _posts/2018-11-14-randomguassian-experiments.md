@@ -14,6 +14,6 @@ I recently started to play around with [Processing](https://processing.org/) and
 I came across a [Points Distribution dilemma](https://www.reddit.com/r/processing/comments/9wutfp/point_distribution_dilemma/) post on r/processing subreddit where [addictedtobiscuits](https://www.reddit.com/user/addictedtobiscuits) is trying to recreate following [image](https://imgur.com/a/RXJxFtO) with processing.
 
 <figure>
-  <img src="/assets/images/randomguassian-fig1.png" alt="Figure 1. Source: https://imgur.com/a/RXJxFtO">
+  <img src="{{ site.baseurl }}/assets/images/randomguassian-fig1.png" alt="Figure 1. Source: https://imgur.com/a/RXJxFtO">
   <figcaption>Source: https://imgur.com/a/RXJxFtO</figcaption>
 </figure>
