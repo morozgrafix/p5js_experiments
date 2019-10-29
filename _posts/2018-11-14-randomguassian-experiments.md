@@ -23,3 +23,32 @@ I thought that it would be an interesting challenge. I quickly put together a sm
 <figure>
     <img src="{{ site.baseurl }}/assets/images/randomguassian-fig2.png" alt="Figure 2. End result">
 </figure>
+
+I wrote my sketch in JavaScript using P5.js, but it can easily be converted into Java for Processing. There is a great primer on how Gaussian distribution works by [Daniel Shiffman](https://shiffman.net/). If you haven’t seen his Coding Train videos I highly recommend it.
+
+{% include video id="8uyR-YU_0dg" provider="youtube" %}
+
+* * *
+
+Here is my thought process and approach. For the sake of easier calculations I’m going to use 1000x1000px canvas.
+
+*Step 1*: Let’s start with placing an imaginary rectangle on our canvas and adding random pixels to it.
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/images/randomguassian-fig3.png" alt="Figure 3.">
+</figure>
+
+From the drawing above we can see that we our randomly placed points need to be placed between *300px* and *700px* on *X* axis and *200px* and *800px* on *Y* axis. We can translate that into code that looks something like this:
+
+~~~javascript
+function setup() {
+  createCanvas(1000, 1000);
+  background(10);
+}
+function draw() {
+  stroke(245);
+  var xloc = random(300, 700);
+  var yloc = random(200, 800);
+  point(xloc, yloc);
+}
+~~~
