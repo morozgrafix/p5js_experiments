@@ -8,8 +8,8 @@ tags:
     - processing
     - tutorial
 header:
-    teaser: /p5js-experiments/assets/images/randomguassian-fig2.png
-    og_image: /p5js-experiments/assets/images/randomguassian-fig2.png
+    teaser: /assets/images/randomguassian-fig2.png
+    og_image: /assets/images/randomguassian-fig2.png
 classes: wide
 ---
 
