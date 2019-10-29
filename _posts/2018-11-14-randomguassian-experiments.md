@@ -17,7 +17,7 @@ I recently started to play around with [Processing](https://processing.org/) and
 
 I came across a [Points Distribution dilemma](https://www.reddit.com/r/processing/comments/9wutfp/point_distribution_dilemma/) post on r/processing subreddit where [addictedtobiscuits](https://www.reddit.com/user/addictedtobiscuits) is trying to recreate following [image](https://imgur.com/a/RXJxFtO) with processing.
 
-{% include figure image_path="/assets/images/randomguassian-fig1.png" alt="Figure 1. Source: https://imgur.com/a/RXJxFtO" caption="Figure 1. Source: [https://imgur.com/a/RXJxFtO](https://imgur.com/a/RXJxFtO)" %}
+{% include figure image_path="/assets/images/randomguassian-fig1.png" alt="Figure 1. Source: https://imgur.com/a/RXJxFtO" caption="Source: [https://imgur.com/a/RXJxFtO](https://imgur.com/a/RXJxFtO)" %}
 
 I thought that it would be an interesting challenge. I quickly put together a small sketch to recreate this effect and wanted to document my thought process. I’m very certain that this can be done in many different ways, but here is my approach and solution. But before we get into explanations I wanted to share my end result, which is fairly close to the image above.
 
