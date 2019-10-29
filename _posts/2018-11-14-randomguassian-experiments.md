@@ -32,13 +32,13 @@ I wrote my sketch in JavaScript using P5.js, but it can easily be converted into
 
 Here is my thought process and approach. For the sake of easier calculations I’m going to use 1000x1000px canvas.
 
-*Step 1*: Let’s start with placing an imaginary rectangle on our canvas and adding random pixels to it.
+**Step 1**: Let’s start with placing an imaginary rectangle on our canvas and adding random pixels to it.
 
 <figure>
     <img src="{{ site.baseurl }}/assets/images/randomguassian-fig3.png" alt="Figure 3.">
 </figure>
 
-From the drawing above we can see that we our randomly placed points need to be placed between *300px* and *700px* on *X* axis and *200px* and *800px* on *Y* axis. We can translate that into code that looks something like this:
+From the drawing above we can see that we our randomly placed points need to be placed between **300px** and **700px** on **X** axis and **200px** and **800px** on **Y** axis. We can translate that into code that looks something like this:
 
 ~~~javascript
 function setup() {
@@ -56,6 +56,24 @@ function draw() {
 and after running this for some time we should see something similar to the image below:
 
 <figure>
-    <img src="{{ site.baseurl }}/assets/images/randomguassian-fig4.png" alt="Figure 4.">
+    <img src="{{ site.baseurl }}/assets/images/randomguassian-fig4.png" alt="Figure 4. Step 1 is done.">
     <figcaption>Step 1 is done. We have randomly located points constrained in a rectangle.</figcaption>
 </figure>
+
+**Step 2**: That was easy. Now let’s try to figure out how we can do that with a trapezoid.
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/images/randomguassian-fig5.png" alt="Figure 5.">
+</figure>
+
+We will break this into 2 problems.
+
+First one is a little easier. For **Y** axis our points need to be placed exactly the same as before, between **200px** and **800px**.
+
+Second one for **X** axis may look a little tricky, but we have all the numbers to figure out where our random points should belong. Let’s look at the top, it seems the same, they should be between **300px** and **700px**. On the bottom of the trapezoid they should fall between **200px** and **800px**.
+
+How do we calculate where points should fall anywhere between the top and the bottom? The answer is that we will use value of the yloc variable to help us with that. We know that it goes from **200px** to **800px** which means the height of the trapezoid is **600px**. The bottom width of the trapezoid is **600px** as well, which means when compared to the top it extends **100px** to the left and **100px** to the right on the bottom.
+
+As `yloc` value increases (going from the top towards the bottom) we need to adjust `xloc` to be shifted up to **100px** to the left and up to **100px** to the right. In other words when `yloc` is **800px** we need to make range of `xloc` to fall between **200px** (`300px — 100px = 200px`) and **800px** (`700px + 100px = 800px`).
+
+Now we just need to figure out what that **100px** in relation to the height of the trapezoid. `(100 / 600) * 100 = 16.666666667%` So at any given value of `yloc` our `shift` should be around 16.6% of `yloc` value. Because we are dealing with `yloc` (which falls into trapezoid boundaries), but starts with value of **200px** we can say that our shift for **X** axis should be calculated as `(yloc — 200) * 0.166`.
