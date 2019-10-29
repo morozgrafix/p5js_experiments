@@ -52,3 +52,10 @@ function draw() {
   point(xloc, yloc);
 }
 ~~~
+
+and after running this for some time we should see something similar to the image below:
+
+<figure>
+    <img src="{{ site.baseurl }}/assets/images/randomguassian-fig4.png" alt="Figure 4.">
+    <figcaption>Step 1 is done. We have randomly located points constrained in a rectangle.</figcaption>
+</figure>
