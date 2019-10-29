@@ -10,7 +10,6 @@ tags:
 header:
     teaser: /p5js-experiments/assets/images/randomguassian-fig2.png
     og_image: /p5js-experiments/assets/images/randomguassian-fig2.png
-layout: single
 classes: wide
 ---
 
@@ -77,7 +76,7 @@ First one is a little easier. For **Y** axis our points need to be placed exactl
 
 Second one for **X** axis may look a little tricky, but we have all the numbers to figure out where our random points should belong. Let’s look at the top, it seems the same, they should be between **300px** and **700px**. On the bottom of the trapezoid they should fall between **200px** and **800px**.
 
-How do we calculate where points should fall anywhere between the top and the bottom? The answer is that we will use value of the yloc variable to help us with that. We know that it goes from **200px** to **800px** which means the height of the trapezoid is **600px**. The bottom width of the trapezoid is **600px** as well, which means when compared to the top it extends **100px** to the left and **100px** to the right on the bottom.
+How do we calculate where points should fall anywhere between the top and the bottom? The answer is that we will use value of the `yloc` variable to help us with that. We know that it goes from **200px** to **800px** which means the height of the trapezoid is **600px**. The bottom width of the trapezoid is **600px** as well, which means when compared to the top it extends **100px** to the left and **100px** to the right on the bottom.
 
 As `yloc` value increases (going from the top towards the bottom) we need to adjust `xloc` to be shifted up to **100px** to the left and up to **100px** to the right. In other words when `yloc` is **800px** we need to make range of `xloc` to fall between **200px** (`300px — 100px = 200px`) and **800px** (`700px + 100px = 800px`).
 
