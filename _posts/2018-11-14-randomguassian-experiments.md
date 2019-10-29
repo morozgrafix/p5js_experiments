@@ -7,6 +7,8 @@ tags:
     - p5.js
     - processing
     - tutorial
+header:
+    teaser: "{{ site.baseurl }}/assets/images/randomguassian-fig2.png"
 ---
 
 I recently started to play around with [Processing](https://processing.org/) and [P5.js](https://p5js.org/) and while I’m not an expert yet I find I enjoy it very much.
