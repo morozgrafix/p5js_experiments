@@ -1,8 +1,8 @@
 ---
-title: "randomGaussian experiments"
+title: "randomGaussian() experiments"
 date: 2018-11-14T19:00:00-08:00
 categories:
-    - blog
+    - Blog
 tags:
     - p5.js
     - processing
