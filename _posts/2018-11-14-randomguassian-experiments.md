@@ -15,11 +15,11 @@ I came across a [Points Distribution dilemma](https://www.reddit.com/r/processin
 
 <figure>
   <img src="{{ site.baseurl }}/assets/images/randomguassian-fig1.png" alt="Figure 1. Source: https://imgur.com/a/RXJxFtO">
-  <figcaption>Source: [https://imgur.com/a/RXJxFtO](https://imgur.com/a/RXJxFtO)</figcaption>
+  <figcaption>Source: <a href="https://imgur.com/a/RXJxFtO">https://imgur.com/a/RXJxFtO</a></figcaption>
 </figure>
 
 I thought that it would be an interesting challenge. I quickly put together a small sketch to recreate this effect and wanted to document my thought process. I’m very certain that this can be done in many different ways, but here is my approach and solution. But before we get into explanations I wanted to share my end result, which is fairly close to the image above.
 
 <figure>
-    <img src="{{ site.baseurl }}/assets/images/randomguassian-fig1.png" alt="Figure 2. End result">
+    <img src="{{ site.baseurl }}/assets/images/randomguassian-fig2.png" alt="Figure 2. End result">
 </figure>
