@@ -8,8 +8,8 @@ tags:
     - processing
     - tutorial
 header:
-    teaser: /assets/images/randomguassian-fig2.png
-    og_image: /assets/images/randomguassian-fig2.png
+    teaser: /assets/images/posts/randomguassian-fig2.png
+    og_image: /assets/images/posts/randomguassian-fig2.png
 classes: wide
 ---
 
@@ -17,11 +17,11 @@ I recently started to play around with [Processing](https://processing.org/) and
 
 I came across a [Points Distribution dilemma](https://www.reddit.com/r/processing/comments/9wutfp/point_distribution_dilemma/) post on r/processing subreddit where [addictedtobiscuits](https://www.reddit.com/user/addictedtobiscuits) is trying to recreate following [image](https://imgur.com/a/RXJxFtO) with processing.
 
-{% include figure image_path="/assets/images/randomguassian-fig1.png" alt="Figure 1. Source: https://imgur.com/a/RXJxFtO" caption="Source: [https://imgur.com/a/RXJxFtO](https://imgur.com/a/RXJxFtO)" %}
+{% include figure image_path="/assets/images/posts/randomguassian-fig1.png" alt="Figure 1. Source: https://imgur.com/a/RXJxFtO" caption="Source: [https://imgur.com/a/RXJxFtO](https://imgur.com/a/RXJxFtO)" %}
 
 I thought that it would be an interesting challenge. I quickly put together a small sketch to recreate this effect and wanted to document my thought process. I’m very certain that this can be done in many different ways, but here is my approach and solution. But before we get into explanations I wanted to share my end result, which is fairly close to the image above.
 
-{% include figure image_path="/assets/images/randomguassian-fig2.png" alt="Figure 2. End result" %}
+{% include figure image_path="/assets/images/posts/randomguassian-fig2.png" alt="Figure 2. End result" %}
 
 I wrote my sketch in JavaScript using P5.js, but it can easily be converted into Java for Processing. There is a great primer on how Gaussian distribution works by [Daniel Shiffman](https://shiffman.net/). If you haven’t seen his Coding Train videos I highly recommend it.
 
@@ -33,7 +33,7 @@ Here is my thought process and approach. For the sake of easier calculations I�
 
 **Step 1**: Let’s start with placing an imaginary rectangle on our canvas and adding random pixels to it.
 
-{% include figure image_path="/assets/images/randomguassian-fig3.png" alt="Figure 3. End result" %}
+{% include figure image_path="/assets/images/posts/randomguassian-fig3.png" alt="Figure 3. End result" %}
 
 From the drawing above we can see that we our randomly placed points need to be placed between **300px** and **700px** on **X** axis and **200px** and **800px** on **Y** axis. We can translate that into code that looks something like this:
 
@@ -52,11 +52,11 @@ function draw() {
 
 and after running this for some time we should see something similar to the image below:
 
-{% include figure image_path="/assets/images/randomguassian-fig4.png" alt="Figure 4. Step 1 is done." caption="Step 1 is done. We have randomly located points constrained in a rectangle." %}
+{% include figure image_path="/assets/images/posts/randomguassian-fig4.png" alt="Figure 4. Step 1 is done." caption="Step 1 is done. We have randomly located points constrained in a rectangle." %}
 
 **Step 2**: That was easy. Now let’s try to figure out how we can do that with a trapezoid.
 
-{% include figure image_path="/assets/images/randomguassian-fig5.png" alt="Figure 5" %}
+{% include figure image_path="/assets/images/posts/randomguassian-fig5.png" alt="Figure 5" %}
 
 We will break this into 2 problems.
 
@@ -88,7 +88,7 @@ function draw() {
 
 Executing this code will give us something like this:
 
-{% include figure image_path="/assets/images/randomguassian-fig6.png" alt="Figure 6. Step 2 is done." caption="Step 2 is done. We have placed random points inside of trapezoid. (Trapezoid boundary lines are drawn for illustration only and aren’t part of the code above)" %}
+{% include figure image_path="/assets/images/posts/randomguassian-fig6.png" alt="Figure 6. Step 2 is done." caption="Step 2 is done. We have placed random points inside of trapezoid. (Trapezoid boundary lines are drawn for illustration only and aren’t part of the code above)" %}
 
 **Step 3**: Let’s get to randomGaussian() already.
 
@@ -122,14 +122,14 @@ function draw() {
   yloc = constrain(yloc, 200, 800);
   var shift = (yloc - 200) * 0.166;
   var xloc = random(300 - shift, 700 + shift);
-  
+
   point(xloc, yloc);
 }
 ~~~
 
 Voila! Here is our final result after running this sketch for some time:
 
-{% include figure image_path="/assets/images/randomguassian-fig7.png" alt="Figure 7." %}
+{% include figure image_path="/assets/images/posts/randomguassian-fig7.png" alt="Figure 7." %}
 
 **Demo:**
 
@@ -152,11 +152,11 @@ function draw() {
   var yloc = randomGaussian();
   yloc = abs(yloc * sd) + mean;
   yloc = constrain(yloc, 200, 800);
-  
-  
+
+
   var shift = (yloc - 200) * 0.166;
   var xloc = random(300 - shift, 700 + shift);
-  
+
   point(xloc, yloc);
 }
 </script>
