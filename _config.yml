@@ -60,7 +60,7 @@ plugins:
 author:
   name   : "Sergey Morozov"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Quality Engineer at [Digit.co](https://digit.co). Previously at [Slack](https://slack.com) & [Flickr](https://flickr.com). I like photography, sailing, hockey and beer. Oh and I may know a guy..."
+  bio    : "Skipper [@QuatroBaklajanos](https://www.instagram.com/QuatroBaklajanos/) Sailing. Previously Quality Engineer at [Slack](https://slack.com) & [Flickr](https://flickr.com). I like photography, sailing, hockey and beer. Oh and I may know a guy..."
   location: "San Francisco, CA"
   links:
     - label: "Website"
